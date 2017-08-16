@@ -1,93 +1,60 @@
-/* Background and other misc stuff */
-body {
-    background-color: #4A4A4A;
+/*  BACKGROUND, VARS, & OTHER FAR REACHING STUFF */
+:root    {
+    --MainTextColour    : #DADADA;
+    --QuoteeTextCol     : #DADADA;
+    --BackGroundCol     : #4A4A4A;
+
 }
 
-/*      TEXT STUFF    */
+body    {    background-color    : var(--BackGroundCol);    }
+
+/*  TEXT  */
 h1 {
-    font-family    : arial;
-    font-size      : 30px;
-    color          : #DADADA;
-}
-
-blockquote {
-     border-left: 4px solid #888;
-     padding-left: 5px;
-     font-size: 20px;
-     color: #DADADA;
-     max-width: 150px;
+    color: var(--MainTextColour);
+    text-align: center;
+    margin: 0 auto;
 }
 
 p {
      text-align: right;
      font-size: 16px;
-     color: #DADADA;
+     color: var(--QuoteeTextCol);
      padding: 3px;
+
 }
 
-TextBox    {
-    width: 100px;
-    height: 50px;
-    border: 1px solid #000;
-    color: #000;
-    float: left;
-    margin-left: 10px;
-    font-size: 15px
+.quote {
+    font-family: 'Franklin Gothic Medium';    /* Is this right? */
+    text-align: justify left;
+    margin: 0 auto;
+    border-left: 4px solid #888;
+    padding-left: 5px;
+    font-size: 20px;
+    color: var(--MainTextColour);
+    max-width: 80%;
 }
 
+/*  CONTAINERS  */
 
-/*div {
-    border: 2px solid #222;
-    float:left;
-    margin: 5px;
-} */
-
-/*@media only screen and (min-width: 768px)   {
-    div {width: 30%;}
-}*/
-
-
-.MyDiv  {
-    float: left;
-    margin: 5px;
-    padding: 5px;
-    max-width: 33%;
-    height: auto;
-    min-height: 600px;
-    max-height: 800px;
-    border: 1px solid black;
-    box-sizing: border-box;
-}
-
-
-/*      IMAGE    */
-img {
-    height: 200px;
-}
-
-
-
-
-
-
-
-/* Design for mobile first */
-[class*="col-"] {
+[class*="c-"] {
     width: 100%;
-    height: auto;
+    float: left;
+    border: 1px solid black;
+    height: 685px;
 }
-/* Desktop */
-@media only screen and (min-width: 768px)   {
-    .col-1 {width: 8.33%; height: auto;}
-    .col-2 {width: 16.66%; height: auto;}
-    .col-3 {width: 25%; height: auto;}
-    .col-4 {width: 33.33%; height: auto;}
-    .col-5 {width: 41.66%; height: auto;}
-    .col-6 {width: 50%; height: auto;}
-    .col-7 {width: 58.33%; height: auto;}
-    .col-8 {width: 66.66%; height: auto;}
-    .col-9 {width: 75%; height: auto;}
-    .col-10 {width: 83.33%; height: auto;}
-    .col-11 {width: 91.66%; height: auto;}
-    .col-12 {width: 100%; height: auto;}
+
+@media only screen and (min-width: 601px)   {
+    .c-1 {width: 45%; margin: 2%; height: 665px;}
+    /*.c-2 {width: 16.66%; height: auto;}   HERE INCASE I FORGET I CAN DO THIS*/
+}
+
+@media only screen and (min-width: 1200px)   {
+    .c-1 {width: 30%; margin: 1.15%; height: 630px;}
+}
+
+/*  IMAGES  */
+
+.image1 {
+    width    : 100%;
+    height   : auto;
 }
