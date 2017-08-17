@@ -1,4 +1,5 @@
 /*  BACKGROUND, VARS, & OTHER FAR REACHING STUFF */
+/* Dear Jeff, bootstrap sucks, it's taken me twice as long so far and it still looks even worse, don't have any control. Frameworks are the devil. */
 :root    {
     --MainTextColour    : #DADADA;
     --QuoteeTextCol     : #DADADA;
@@ -13,7 +14,10 @@ h1 {
     color: var(--MainTextColour);
     text-align: center;
     margin: 0 auto;
+    font-family: 'Franklin Gothic Medium';    /* Is this right? */
 }
+
+blockquote {    color: var(--MainTextColour);    }
 
 p {
      text-align: right;
@@ -22,45 +26,15 @@ p {
      padding: 3px;
 }
 
-
-
-
-
 /*  IMAGES  */
-
-.image1 {
-    width    : 80%;
-    height   : auto;
-}
-
-
-
-
-
-
+.image1 {    width: 100%;    height: auto;    }
 
 /*  CONTAINERS  */
-.jumbotron {
-    color: #000;
-}
-.container {
-    color: #000;
-}
+.row    {    display: flex;    flex-wrap: wrap;    margin: 0.1%;    }
+.row > [class*='col-']  {    display: flex;    flex-direction: column;    }
 
-/* Small devices (tablets, 768px and up) */
-@media (min-width: @screen-sm-min) {
+[class*="col-"] {    padding: 0%;    background-color: #555;    }
 
-}
-
-/* Medium devices (desktops, 992px and up) */
-@media (min-width: @screen-md-min) {
-    
-}
-
-/* Large devices (large desktops, 1200px and up) */
-@media (min-width: @screen-lg-min) {
-    
-}
 
 
 /*
